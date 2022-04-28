@@ -1,33 +1,29 @@
 create schema if not exists content;
 
+CREATE EXTENSION if not exists "uuid-ossp";
+
+SET search_path TO content,public;
+
 create table if not exists content.train(
 	id uuid primary key,
-	name_train text not null
+	name text not null
 );
 
 create table if not exists content.wagon(
 	id uuid primary key,
 	train_id uuid references content.train not null,
-	name_wagon text not null
-);
-
-create table if not exists content.tariff(
-	id uuid primary key,
-	name_tariff text not null,
-	discount int not null
+	name text not null,
+	class text not null,
+	capacity int not null,
+	check(class_wagon in ('плацкарт', 'купе', 'СВ'))
 );
 
 create table if not exists content.privilege(
 	id uuid primary key,
-	name_privilege text not null,
+	category text not null,
+	description text not null,
+	tariff text,
 	discount int not null
-);
-
-create table if not exists content.place(
-	id uuid primary key,
-	wagon_id uuid references content.wagon not null,
-	class_wagon text not null,
-	position text not null
 );
 
 create table if not exists content.city(
@@ -35,14 +31,20 @@ create table if not exists content.city(
 	name_city text not null
 );
 
-create table if not exists content.product(
+create table if not exists content.service(
 	id uuid primary key,
-	name_product text not null,
-	price money,
-	availability boolean not null
+	name text not null,
+	price numeric not null,
+	is_optional boolean not null
 );
 
-create table if not exists content.user(
+create table if not exists content.service_to_ticket(
+	service_id int references content.service,
+	ticket_id int references content.ticket,
+	primary key (service_id, ticket_id)
+);
+
+create table if not exists content."user"(
 	id uuid primary key,
 	full_name text not null,
 	docs int not null
@@ -61,13 +63,11 @@ create table if not exists content.trip(
 
 create table if not exists content.ticket(
 	id uuid primary key,
-	train_id uuid references content.train not null,
-	tariff_id uuid references content.tariff not null,
+	wagon_id uuid references content.wagon not null,
 	priv_id uuid references content.privilege not null,
-	place_id uuid references content.place not null,
 	trip_id uuid references content.trip not null,
 	user_id uuid references content.user not null,
-	product_id uuid references content.product,
-	price money,
-	availability boolean
+	price numeric not null,
+	availability boolean not null,
+	place int not null
 );
