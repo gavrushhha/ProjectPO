@@ -89,7 +89,7 @@ msgstr "цена"
 
 #: TrainTicket/models.py:70
 msgid "optional"
-msgstr "опции"
+msgstr "наличие"
 
 #: TrainTicket/models.py:78
 msgid "service"

@@ -79,7 +79,7 @@ class Service(UUIDMixin):
         verbose_name_plural = _('services')
 
 class Trip(UUIDMixin):
-    train  = models.ForeignKey(Train, on_delete=models.CASCADE, related_name=_('train_trip+'))
+    train  = models.ForeignKey(Train, verbose_name=_('train'), on_delete=models.CASCADE, related_name='train_trip')
     city_departure = models.ForeignKey(City, verbose_name=_('city_departure'), on_delete=models.CASCADE, related_name='city_departure')
     city_arrival = models.ForeignKey(City, verbose_name=_('city_arrival'), on_delete=models.CASCADE, related_name='city_arrival')
     way_departure = models.IntegerField(_('way_departure'), blank=True)
