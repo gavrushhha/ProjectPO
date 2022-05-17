@@ -1,0 +1,158 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-05-11 17:41+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+#: TrainTicket/models.py:16 TrainTicket/models.py:57 TrainTicket/models.py:68
+msgid "name"
+msgstr ""
+
+#: TrainTicket/models.py:23
+msgid "train"
+msgstr ""
+
+#: TrainTicket/models.py:24
+msgid "trains"
+msgstr ""
+
+#: TrainTicket/models.py:27 TrainTicket/models.py:38 TrainTicket/models.py:113
+msgid "wagon"
+msgstr ""
+
+#: TrainTicket/models.py:28
+msgid "train_wagon"
+msgstr ""
+
+#: TrainTicket/models.py:29
+msgid "class"
+msgstr ""
+
+#: TrainTicket/models.py:30
+msgid "capacity"
+msgstr ""
+
+#: TrainTicket/models.py:39
+msgid "wagons"
+msgstr ""
+
+#: TrainTicket/models.py:42
+msgid "category"
+msgstr ""
+
+#: TrainTicket/models.py:43
+msgid "discount"
+msgstr ""
+
+#: TrainTicket/models.py:45
+msgid "description"
+msgstr ""
+
+#: TrainTicket/models.py:46
+msgid "tariff"
+msgstr ""
+
+#: TrainTicket/models.py:53 TrainTicket/models.py:115
+msgid "privilege"
+msgstr ""
+
+#: TrainTicket/models.py:54
+msgid "privileges"
+msgstr ""
+
+#: TrainTicket/models.py:64
+msgid "city"
+msgstr ""
+
+#: TrainTicket/models.py:65
+msgid "cities"
+msgstr ""
+
+#: TrainTicket/models.py:69 TrainTicket/models.py:117
+msgid "price"
+msgstr ""
+
+#: TrainTicket/models.py:70
+msgid "optional"
+msgstr ""
+
+#: TrainTicket/models.py:78
+msgid "service"
+msgstr ""
+
+#: TrainTicket/models.py:79
+msgid "services"
+msgstr ""
+
+#: TrainTicket/models.py:82
+msgid "train_trip"
+msgstr ""
+
+#: TrainTicket/models.py:83
+msgid "city_departure"
+msgstr ""
+
+#: TrainTicket/models.py:84
+msgid "city_arrival"
+msgstr ""
+
+#: TrainTicket/models.py:85
+msgid "way_departure"
+msgstr ""
+
+#: TrainTicket/models.py:86
+msgid "way_arrival"
+msgstr ""
+
+#: TrainTicket/models.py:96 TrainTicket/models.py:112
+msgid "trip"
+msgstr ""
+
+#: TrainTicket/models.py:97
+msgid "trips"
+msgstr ""
+
+#: TrainTicket/models.py:100
+msgid "full_name"
+msgstr ""
+
+#: TrainTicket/models.py:101
+msgid "docs"
+msgstr ""
+
+#: TrainTicket/models.py:108 TrainTicket/models.py:114
+msgid "user"
+msgstr ""
+
+#: TrainTicket/models.py:109
+msgid "users"
+msgstr ""
+
+#: TrainTicket/models.py:119
+msgid "availability"
+msgstr ""
+
+#: TrainTicket/models.py:121
+msgid "place"
+msgstr ""
+
+#: TrainTicket/models.py:130
+msgid "ticket"
+msgstr ""
+
+#: TrainTicket/models.py:131
+msgid "tickets"
+msgstr ""
