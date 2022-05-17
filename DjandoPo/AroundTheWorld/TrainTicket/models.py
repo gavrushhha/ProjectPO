@@ -89,7 +89,7 @@ class Trip(UUIDMixin):
 
 
     def __str__(self):
-        return self.train + " " + self.city_arrival + " " + self.city_departure
+        return ' '.join([str(self.train), str(self.city_departure), str(self.city_arrival)])
 
     class Meta:
         db_table = "content\".\"trip"
@@ -98,7 +98,7 @@ class Trip(UUIDMixin):
 
 class User(UUIDMixin):
     full_name = models.CharField(_('full_name'), max_length=255)
-    docs = models.IntegerField(_('docs'), blank=True)
+    docs = models.CharField(_('docs'), max_length=255)
 
     def __str__(self):
         return self.full_name
@@ -120,8 +120,8 @@ class Ticket(UUIDMixin):
 
     place = models.IntegerField(_('place'), blank=True)
 
-    # def __str__(self):
-    #     return self.price
+    def __str__(self):
+        return ' '.join([str(self.trip), str(self.place), str(self.price)])
 
     class Meta:
         db_table = "content\".\"ticket"
