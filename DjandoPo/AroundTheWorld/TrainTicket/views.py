@@ -1,20 +1,83 @@
 from django.shortcuts import render
 
-from django.contrib.auth.models import User, Group
-from rest_framework import viewsets
-from rest_framework import permissions
-from TrainTicket.serializers import UserSerializer, GroupSerializer
+from django.http import HttpResponse
+from django.shortcuts import get_object_or_404
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from rest_framework import status, generics
+from .models import User, Train, Wagon, Privilege, City, Service, Trip, Ticket
+from .serializers import UserSerializer, TrainSerializer, WagonSerializer, PrivilegeSerializer, CitySerializer, ServiceSerializer, TripSerializer, TicketSerializer
 
 
-class UserViewSet(viewsets.ModelViewSet):
-    
-    queryset = User.objects.all().order_by('-date_joined')
+
+class UserList(generics.ListCreateAPIView):
+    queryset = User.objects.all()
     serializer_class = UserSerializer
-    permission_classes = [permissions.IsAuthenticated]
+
+class UserDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
 
 
-class GroupViewSet(viewsets.ModelViewSet):
+class TrainList(generics.ListCreateAPIView):
+    queryset = Train.objects.all()
+    serializer_class = TrainSerializer
 
-    queryset = Group.objects.all()
-    serializer_class = GroupSerializer
-    permission_classes = [permissions.IsAuthenticated]
+class TrainDetail(generics.ListCreateAPIView):
+    queryset = Train.objects.all()
+    serializer_class = TrainSerializer
+
+
+class WagonList(generics.ListCreateAPIView):
+    queryset = Wagon.objects.all()
+    serializer_class = WagonSerializer
+
+class WagonDetail(generics.ListCreateAPIView):
+    queryset = Wagon.objects.all()
+    serializer_class = WagonSerializer
+
+
+class PrivilegeList(generics.ListCreateAPIView):
+    queryset = Privilege.objects.all()
+    serializer_class = PrivilegeSerializer
+
+class PrivilegeDetail(generics.ListCreateAPIView):
+    queryset = Privilege.objects.all()
+    serializer_class = PrivilegeSerializer
+
+
+class CityList(generics.ListCreateAPIView):
+    queryset = City.objects.all()
+    serializer_class = CitySerializer
+
+class CityDetail(generics.ListCreateAPIView):
+    queryset = City.objects.all()
+    serializer_class = CitySerializer
+
+
+class ServiceList(generics.ListCreateAPIView):
+    queryset = Service.objects.all()
+    serializer_class = ServiceSerializer
+
+class ServiceDetail(generics.ListCreateAPIView):
+    queryset = Service.objects.all()
+    serializer_class = ServiceSerializer
+
+
+class TripList(generics.ListCreateAPIView):
+    queryset = Trip.objects.all()
+    serializer_class = TripSerializer
+
+class TripDetail(generics.ListCreateAPIView):
+    queryset = Trip.objects.all()
+    serializer_class = TripSerializer
+
+
+class TicketList(generics.ListCreateAPIView):
+    queryset = Ticket.objects.all()
+    serializer_class = TicketSerializer
+
+class TicketDetail(generics.ListCreateAPIView):
+    queryset = Ticket.objects.all()
+    serializer_class = TicketSerializer
+
