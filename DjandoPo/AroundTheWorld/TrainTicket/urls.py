@@ -30,3 +30,4 @@ urlpatterns = [
 
 urlpatterns = format_suffix_patterns(urlpatterns)
 
+# uuid:id работает с ююид; не работает с удалением 
