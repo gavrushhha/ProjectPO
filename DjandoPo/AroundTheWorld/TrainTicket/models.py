@@ -1,3 +1,4 @@
+from secrets import choice
 from pydoc import describe
 from django.db import models
 import uuid
@@ -57,9 +58,14 @@ class TariffChoices(models.TextChoices):
 
 
 class Privilege(UUIDMixin):
+    DISCOUNT = (
+    ('50', '50%'),
+    ('25', '25%')
+)
     category = models.CharField(_('category'), choices=TariffChoices.choices, max_length=255)
-    discount = models.FloatField(_('discount'), blank=True, validators=[MinValueValidator(0), MaxValueValidator(100)])
-    description = models.CharField(_('description'), max_length=255)
+    discount = models.IntegerField(blank=True, default=0)
+
+    description = models.CharField(_('description'), max_length=255, choices=DISCOUNT)
     # tariff = models.CharField(_('tariff'), max_length=255)
 
     def __str__(self):
@@ -88,8 +94,6 @@ class Service(UUIDMixin):
     price = models.FloatField(_('price'), blank=True)
     is_optional = models.BooleanField(_('optional'), blank=True)
 
-    def __str__(self):
-        return self.name
 
     class Meta:
         db_table = "content\".\"service"
@@ -129,6 +133,7 @@ class User(UUIDMixin):
 
 
 class Ticket(UUIDMixin):
+       
     trip = models.ForeignKey(Trip, verbose_name=_('trip'), on_delete=models.CASCADE, related_name='trip')
     wagon = models.ForeignKey(Wagon, verbose_name=_('wagon'), on_delete=models.CASCADE, related_name='wagon')
     user = models.ForeignKey(User, verbose_name=_('user'), on_delete=models.CASCADE, related_name='user')

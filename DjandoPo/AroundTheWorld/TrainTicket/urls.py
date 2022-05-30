@@ -1,8 +1,23 @@
-from django.urls import path
+from django.urls import path, include
 from rest_framework.urlpatterns import format_suffix_patterns
-from TrainTicket import views
+from . import views
+# from rest_framework import routers
+
+
+# router = routers.DefaultRouter()
+# router.register(r'Train', views.TrainList)
+# router.register(r'Wagon', views.WagonList)
+# router.register(r'Privelege', views.PrivilegeList)
+# router.register(r'City', views.CityList)
+# router.register(r'Service', views.ServiceList)
+# router.register(r'Trip', views.TripList)
+# router.register(r'Ticket', views.TicketList)
+
+
 
 urlpatterns = [
+    # path('rest/', include(router.urls)),
+
     path('user/', views.UserList.as_view()),
     path('user/<int:pk>/', views.UserDetail.as_view()),
     

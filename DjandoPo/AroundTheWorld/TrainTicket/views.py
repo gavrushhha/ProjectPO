@@ -30,9 +30,20 @@ class TrainDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Train.objects.all()
     serializer_class = TrainSerializer
     permission_classes = (permissions.IsAuthenticatedOrReadOnly,IsOwnerOrReadOnly,)
+    # lookup_field = 'uuid:id' 
 
+    # def get(self, request, *args, **kwargs):
+    #     return self.list(request, *args, **kwargs)
+
+    # def put(self, request, *args, **kwargs):
+    #     return self.update(request, *args, **kwargs)
+
+    # def patch(self, request, *args, **kwargs):
+    #     return self.partial_update(request, *args, **kwargs)
+# generics.mixins.RetrieveModelMixin,generics.GenericAPIView,
 
 class WagonList(generics.ListCreateAPIView):
+    
     queryset = Wagon.objects.all()
     serializer_class = WagonSerializer
 
