@@ -1,0 +1,210 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-05-30 07:55+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: TrainTicket/models.py:19 TrainTicket/models.py:141 TrainTicket/models.py:154
+msgid "name"
+msgstr ""
+
+#: TrainTicket/models.py:27 TrainTicket/models.py:40 TrainTicket/models.py:169
+msgid "train"
+msgstr ""
+
+#: TrainTicket/models.py:28
+msgid "trains"
+msgstr ""
+
+#: TrainTicket/models.py:32
+msgid "reserved seat"
+msgstr ""
+
+#: TrainTicket/models.py:33
+msgid "coupe"
+msgstr ""
+
+#: TrainTicket/models.py:34
+msgid "SW"
+msgstr ""
+
+#: TrainTicket/models.py:38 TrainTicket/models.py:52 TrainTicket/models.py:212
+msgid "wagon"
+msgstr ""
+
+#: TrainTicket/models.py:41
+msgid "class"
+msgstr ""
+
+#: TrainTicket/models.py:42
+msgid "capacity"
+msgstr ""
+
+#: TrainTicket/models.py:53
+msgid "wagons"
+msgstr ""
+
+#: TrainTicket/models.py:57
+msgid "school"
+msgstr ""
+
+#: TrainTicket/models.py:58
+msgid "students"
+msgstr ""
+
+#: TrainTicket/models.py:59
+msgid "children"
+msgstr ""
+
+#: TrainTicket/models.py:60
+msgid "veterans"
+msgstr ""
+
+#: TrainTicket/models.py:61
+msgid "pensioners"
+msgstr ""
+
+#: TrainTicket/models.py:62
+msgid "persons with disabilities"
+msgstr ""
+
+#: TrainTicket/models.py:75
+msgid "Pupils of general educational institutions from 10 years and older"
+msgstr ""
+
+#: TrainTicket/models.py:76
+msgid "Students of higher and secondary educational institutions"
+msgstr ""
+
+#: TrainTicket/models.py:77
+msgid ""
+"The passenger has the right to carry free* 1 child under the age of 5 years, "
+"if he does not occupy a separate seat in the carriages"
+msgstr ""
+
+#: TrainTicket/models.py:79
+msgid "Combat veterans"
+msgstr ""
+
+#: TrainTicket/models.py:80
+msgid ""
+"Passengers aged 60 and over will be able to travel in a coupe at a discount"
+msgstr ""
+
+#: TrainTicket/models.py:81
+msgid ""
+"Passengers with disabilities can issue tickets to specialized compartments "
+"and carriages with seats"
+msgstr ""
+
+#: TrainTicket/models.py:86
+msgid "category"
+msgstr ""
+
+#: TrainTicket/models.py:87
+msgid "discount"
+msgstr ""
+
+#: TrainTicket/models.py:89
+msgid "description"
+msgstr ""
+
+#: TrainTicket/models.py:136 TrainTicket/models.py:214
+msgid "privilege"
+msgstr ""
+
+#: TrainTicket/models.py:137
+msgid "privileges"
+msgstr ""
+
+#: TrainTicket/models.py:149
+msgid "city"
+msgstr ""
+
+#: TrainTicket/models.py:150
+msgid "cities"
+msgstr ""
+
+#: TrainTicket/models.py:155 TrainTicket/models.py:215
+#: TrainTicket/models.py:221
+msgid "price"
+msgstr ""
+
+#: TrainTicket/models.py:156
+msgid "optional"
+msgstr ""
+
+#: TrainTicket/models.py:164
+msgid "service"
+msgstr ""
+
+#: TrainTicket/models.py:165
+msgid "services"
+msgstr ""
+
+#: TrainTicket/models.py:170
+msgid "city_departure"
+msgstr ""
+
+#: TrainTicket/models.py:172
+msgid "city_arrival"
+msgstr ""
+
+#: TrainTicket/models.py:174
+msgid "way_departure"
+msgstr ""
+
+#: TrainTicket/models.py:178
+msgid "way_arrival"
+msgstr ""
+
+#: TrainTicket/models.py:190 TrainTicket/models.py:211
+msgid "trip"
+msgstr ""
+
+#: TrainTicket/models.py:191
+msgid "trips"
+msgstr ""
+
+#: TrainTicket/models.py:195
+msgid "username"
+msgstr ""
+
+#: TrainTicket/models.py:197
+msgid "docs"
+msgstr ""
+
+#: TrainTicket/models.py:198
+msgid "email"
+msgstr ""
+
+#: TrainTicket/models.py:206 TrainTicket/models.py:207
+#: TrainTicket/models.py:213
+msgid "person"
+msgstr ""
+
+#: TrainTicket/models.py:216 TrainTicket/models.py:221
+msgid "place"
+msgstr ""
+
+#: TrainTicket/models.py:226
+msgid "ticket"
+msgstr ""
+
+#: TrainTicket/models.py:227
+msgid "tickets"
+msgstr ""

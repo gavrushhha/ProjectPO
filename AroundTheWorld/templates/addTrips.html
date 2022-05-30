@@ -1,0 +1,66 @@
+{% extends './base.html' %}
+{% block content %}
+
+<div class="container" style="display: flex;align-items: center;justify-content: center;margin-top: 100px;">
+    <div class='jumbotron' style='width: 75%; '>
+
+        <center><div style="margin-bottom: 40px;"><h1>Add Trips</h1></div></center>
+
+        <form method='POST' action='http://127.0.0.1:8000/reservation/addtrips/'>
+            {% csrf_token %}
+
+            <div class="form-group row">
+                <label class='form-label col-sm-2' for="name">Train Name</label>
+                <div class='col-sm-10'>
+                    <input type="text" class="form-control" id="train" placeholder='Enter the Name of the train' name="train">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class='form-label col-sm-2' for="name">City departure</label>
+                <div class='col-sm-10'>
+                    <input type="text" class="form-control" id="city_departure" placeholder='Enter the city departure' name="city_departure">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class='form-label col-sm-2' for="name">City arrival</label>
+                <div class='col-sm-10'>
+                    <input type="text" class="form-control" id="city_arrival" placeholder='Enter the city arrival' name="city_arrival">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class='form-label col-sm-2' for="name">Way departure</label>
+                <div class='col-sm-10'>
+                    <input type="text" class="form-control" id="way_departure" placeholder='Enter the way departure' name="way_departure">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class='form-label col-sm-2' for="name">Way arrival</label>
+                <div class='col-sm-10'>
+                    <input type="text" class="form-control" id="way_arrival" placeholder='Enter the way arrival' name="way_arrival">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class='form-label col-sm-2' for="name">Time departure</label>
+                <div class='col-sm-10'>
+                    <input type="time" class="form-control" id="time_departure" placeholder='Enter the time departure' name="time_departure">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class='form-label col-sm-2' for="name">Time arrival</label>
+                <div class='col-sm-10'>
+                    <input type="time" class="form-control" id="time_arrival" placeholder='Enter the time arrival' name="time_arrival">
+                </div>
+            </div>
+
+            <center><input type="submit" class="btn btn-success" value='Add'></center>
+
+        </form>
+    </div>
+</div>
+{% endblock %}

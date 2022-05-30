@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>Django People</title>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <ul class="navbar-nav">
+
+            {% if request.user.is_superuser %}
+
+            <span class="navbar-brand mb-0 h1">Admin</span>
+            {% else %}
+            <span class="navbar-brand mb-0 h1">{{request.user.username}}</span>
+
+            {% endif %}
+            <li class="nav-item">
+                <a class="nav-link" href="http://127.0.0.1:8000/">Home</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="http://127.0.0.1:8000/bookform/">Book ticket</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="http://127.0.0.1:8000/mybooking/">My Bookings</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="http://127.0.0.1:8000/trainform/">Add Trips</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="http://127.0.0.1:8000/privileges/">Privileges</a>
+            </li>
+
+            {% if request.user.is_authenticated %}
+            <li class="nav-item">
+                <a class="nav-link" href="http://127.0.0.1:8000/logout/">Logout</a>
+            </li>
+            {% else %}
+
+            <li class="nav-item">
+                <a class="nav-link" href="http://127.0.0.1:8000/loginform/">Login</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="http://127.0.0.1:8000/registerform/">Register</a>
+            </li>
+
+            {% endif %}
+        </ul>
+    </nav>
+
+</head>
+<body>
+    {% block content %}
+    {% endblock %}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>

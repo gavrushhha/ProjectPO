@@ -1,0 +1,36 @@
+{% extends "./base.html" %}
+
+{% block content %}
+
+<div style="margin-top: 50px;">
+    <center><h2> Ticket </h2></center>
+
+    <table class="table table-striped" style="width: 90%;margin-left:75px ;margin-top: 30px;">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Trip</th>
+                <th scope="col">Wagon</th>
+                <th scope="col">Privilege</th>
+                <th scope="col">Price</th>
+                <th scope="col">Place</th>
+                <th scope="col">Book</th>
+            </tr>
+        </thead>
+        <tbody>
+            {%for p in ticket%}
+
+            <tr>
+                <td>{{p.trip}}</td>
+                <td>{{p.wagon}}</td>
+                <td>{{p.priv}}</td>
+                <td>{{p.price}}</td>
+                <td>{{p.place}}</td>
+                <td><a href="http://127.0.0.1:8000/booking/{{p.pk}}"><button class='btn btn-success'>Book Ticket</button></a></td>
+            </tr>
+
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+{% endblock %}
