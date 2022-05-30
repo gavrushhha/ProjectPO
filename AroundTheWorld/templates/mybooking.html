@@ -1,0 +1,44 @@
+{% extends "./base.html" %}
+
+{% block content %}
+
+<div style="margin-top: 50px;">
+    <center><h2> My booking </h2></center>
+
+    <table class="table table-striped" style="width: 90%;margin-left:75px ;margin-top: 30px;">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Trip</th>
+                <th scope="col">Wagon</th>
+                <th scope="col">Way departure</th>
+                <th scope="col">Way arrival</th>
+                <th scope="col">Time departure</th>
+                <th scope="col">Time arrival</th>
+                <th scope="col">Username</th>
+                <th scope="col">Privilege</th>
+                <th scope="col">Price</th>
+                <th scope="col">Place</th>
+            </tr>
+        </thead>
+        <tbody>
+            {%for i in ticket%}
+
+            <tr>
+                <td>{{i.trip}}</td>
+                <td>{{i.wagon}}</td>
+                <td>{{i.trip.way_departure}}</td>
+                <td>{{i.trip.way_arrival}}</td>
+                <td>{{i.trip.time_departure}}</td>
+                <td>{{i.trip.time_arrival}}</td>
+                <td>{{i.user.username}}</td>
+                <td>{{i.priv}}</td>
+                <td>{{i.price}}</td>
+                <td>{{i.place}}</td>
+            </tr>
+
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+{% endblock %}

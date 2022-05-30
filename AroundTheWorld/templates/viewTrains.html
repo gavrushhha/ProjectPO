@@ -1,0 +1,38 @@
+{% extends "./base.html" %}
+
+{% block content %}
+
+<div style="margin-top: 50px;">
+    <center><h2> Trips </h2></center>
+
+    <table class="table table-striped" style="width: 90%;margin-left:75px ;margin-top: 30px;">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Train Number</th>
+                <th scope="col">City departure</th>
+                <th scope="col">City arrival</th>
+                <th scope="col">Way departure</th>
+                <th scope="col">Way arrival</th>
+                <th scope="col">Time departure</th>
+                <th scope="col">Time arrival</th>
+            </tr>
+        </thead>
+        <tbody>
+            {%for p in trips%}
+
+            <tr>
+                <td><a href="http://127.0.0.1:8000/{{p.train_id}}">{{p.train}}</a></td>
+                <td>{{p.city_departure}}</td>
+                <td>{{p.city_arrival}}</td>
+                <td>{{p.way_departure}}</td>
+                <td>{{p.way_arrival}}</td>
+                <td>{{p.time_departure}}</td>
+                <td>{{p.time_arrival}}</td>
+            </tr>
+
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+{% endblock %}

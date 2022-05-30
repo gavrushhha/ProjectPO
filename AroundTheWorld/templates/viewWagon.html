@@ -1,0 +1,32 @@
+{% extends "./base.html" %}
+
+{% block content %}
+
+<div style="margin-top: 50px;">
+    <center><h2> Wagon Details </h2></center>
+
+    <table class="table table-striped" style="width: 90%;margin-left:75px ;margin-top: 30px;">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Wagon Name</th>
+                <th scope="col">Train</th>
+                <th scope="col">Class wagon</th>
+                <th scope="col">Capacity</th>
+            </tr>
+        </thead>
+        <tbody>
+            {%for w in wagons%}
+
+            <tr>
+                <td>{{w.name}}</td>
+                <td>{{w.train}}</td>
+                <td>{{w.class_wagon}}</td>
+                <td>{{w.capacity}}</td>
+            </tr>
+
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+{% endblock %}

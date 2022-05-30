@@ -1,0 +1,30 @@
+{% extends "./base.html" %}
+
+{% block content %}
+
+<div style="margin-top: 50px;">
+    <center><h2> Privileges </h2></center>
+
+    <table class="table table-striped" style="width: 90%;margin-left:75px ;margin-top: 30px;">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Category</th>
+                <th scope="col">Discount</th>
+                <th scope="col">Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            {%for i in privileges%}
+
+            <tr>
+                <td>{{i.category}}</td>
+                <td>{{i.discount}}</td>
+                <td>{{i.description}}</td>
+            </tr>
+
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+{% endblock %}
