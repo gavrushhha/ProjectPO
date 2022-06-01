@@ -14,6 +14,7 @@ def index(request):
                   './viewTrains.html',
                   {"trips": trips})
 
+
 def privileges(request):
     privileges = Privilege.objects.all()
     return render(request,
@@ -106,23 +107,28 @@ def book(request):
             email = request.POST.get('email')
             priv = request.POST.get('priv')
             class_wagon = request.POST.get('class_wagon')
+            wagon_name = request.POST.get('wagon_name')
             place = request.POST.get('place')
+            time_departure = request.POST.get('time')
 
-            trip = Trip.objects.filter(city_departure=city_departure, city_arrival=city_arrival).first()
-            wagon = Wagon.objects.filter(class_wagon=class_wagon).first()
+            trip = Trip.objects.get(city_departure=city_departure, city_arrival=city_arrival,
+                                    time_departure=time_departure + ':00')
+            train_id = trip.train.id
+            wagon = Wagon.objects.filter(name=wagon_name, class_wagon=class_wagon, train_id=train_id).first()
             privilege = Privilege.objects.get(category=priv)
 
             all_persons = Person.objects.filter(username=name)
 
             discount = privilege.discount
             price = 5000
-            price *= discount/100
+            price *= discount / 100
 
             if not all_persons:
                 p = Person(username=name, docs=docs, email=email)
                 p.save()
                 if request.user.username == name:
-                    ticket = Ticket.objects.create(trip=trip, wagon=wagon, user=p, priv=privilege, place=place, price=price)
+                    ticket = Ticket.objects.create(trip=trip, wagon=wagon, user=p, priv=privilege, place=place,
+                                                   price=price)
                     ticket.save()
                     ticket_need = Ticket.objects.filter(pk=ticket.pk)
                     return render(request, './trainsavailable.html', {'ticket': ticket_need})
@@ -132,7 +138,8 @@ def book(request):
             user = Person.objects.get(username=name, docs=docs, email=email)
             if all_persons:
                 if request.user.username == name:
-                    ticket = Ticket.objects.create(trip=trip, wagon=wagon, user=user, priv=privilege, place=place, price=price)
+                    ticket = Ticket.objects.create(trip=trip, wagon=wagon, user=user, priv=privilege, place=place,
+                                                   price=price)
                     ticket.save()
                     ticket_need = Ticket.objects.filter(pk=ticket.pk)
                     return render(request, './trainsavailable.html', {'ticket': ticket_need})
@@ -143,8 +150,9 @@ def book(request):
 
         else:
             return render(request, './error.html', {'msg': "Not Found"})
-    except:
-        return render(request, './error.html', {'msg': "Error"})
+
+    except Exception as e:
+        return render(request, './error.html', {'msg': e})
 
 
 def booking(request, ticket_id):
@@ -161,15 +169,18 @@ def bookform(request):
     departure = [i.city_departure for i in trip]
     arrival = [i.city_arrival for i in trip]
     wagon = [i.class_wagon for i in wagons]
+    wagon_name = [i.name for i in wagons]
 
     departure = list(set(departure))
     arrival = list(set(arrival))
     class_wagon = list(set(wagon))
+    wagon_name = list(set(wagon_name))
     data = {
         'departure': departure,
         'arrival': arrival,
         'class_wagon': class_wagon,
-        'priv': privileges
+        'priv': privileges,
+        'wagon_name': wagon_name,
     }
     if request.user.is_authenticated:
         return render(request, './booking.html', data)
