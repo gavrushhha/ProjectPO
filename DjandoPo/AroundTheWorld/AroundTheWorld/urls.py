@@ -10,5 +10,5 @@ urlpatterns = [
 
     path('', include('TrainTicket.urls')),
     # path('train/', views.TrainList.as_view),
-    path('user/', views.UserList.as_view()),
+    # path('user/', views.UserList.as_view()),
 ]
