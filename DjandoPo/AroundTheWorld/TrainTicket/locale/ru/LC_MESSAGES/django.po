@@ -1,0 +1,230 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-05-18 13:19+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: TrainTicket/models.py:16 TrainTicket/models.py:72 TrainTicket/models.py:83
+msgid "name"
+msgstr "название"
+
+#: TrainTicket/models.py:23 TrainTicket/models.py:34
+msgid "train"
+msgstr "поезд"
+
+#: TrainTicket/models.py:24
+msgid "trains"
+msgstr "поезда"
+
+#: TrainTicket/models.py:28
+msgid "RESERVED SEAT"
+msgstr ""
+
+#: TrainTicket/models.py:28
+msgid "reserved seat"
+msgstr ""
+
+#: TrainTicket/models.py:29
+msgid "COUPE"
+msgstr ""
+
+#: TrainTicket/models.py:29
+msgid "coupe"
+msgstr ""
+
+#: TrainTicket/models.py:30
+msgid "SW"
+msgstr ""
+
+#: TrainTicket/models.py:33 TrainTicket/models.py:44 TrainTicket/models.py:128
+msgid "wagon"
+msgstr "вагон"
+
+#: TrainTicket/models.py:35
+msgid "class"
+msgstr "класс"
+
+#: TrainTicket/models.py:36
+msgid "capacity"
+msgstr "вместимость"
+
+#: TrainTicket/models.py:45
+msgid "wagons"
+msgstr "вагоны"
+
+#: TrainTicket/models.py:49
+msgid "SCHOOL"
+msgstr ""
+
+#: TrainTicket/models.py:49
+msgid "school"
+msgstr ""
+
+#: TrainTicket/models.py:50
+msgid "STUDENTS"
+msgstr ""
+
+#: TrainTicket/models.py:50
+msgid "students"
+msgstr ""
+
+#: TrainTicket/models.py:51
+msgid "CHILDREN"
+msgstr ""
+
+#: TrainTicket/models.py:51
+msgid "children"
+msgstr ""
+
+#: TrainTicket/models.py:52
+msgid "VETERANS"
+msgstr ""
+
+#: TrainTicket/models.py:52
+msgid "veterans"
+msgstr ""
+
+#: TrainTicket/models.py:53
+msgid "PENSIONERS"
+msgstr ""
+
+#: TrainTicket/models.py:53
+msgid "pensioners"
+msgstr ""
+
+#: TrainTicket/models.py:54
+msgid "PERSONS WITH DISABILITIES"
+msgstr ""
+
+#: TrainTicket/models.py:54
+msgid "persons with disabilities"
+msgstr ""
+
+#: TrainTicket/models.py:57
+msgid "category"
+msgstr "льготы"
+
+#: TrainTicket/models.py:58
+msgid "discount"
+msgstr "скидка"
+
+#: TrainTicket/models.py:60
+msgid "description"
+msgstr "описание"
+
+#: TrainTicket/models.py:61
+msgid "tariff"
+msgstr "тариф"
+
+#: TrainTicket/models.py:68 TrainTicket/models.py:130
+msgid "privilege"
+msgstr "льгота"
+
+#: TrainTicket/models.py:69
+msgid "privileges"
+msgstr "льготы"
+
+#: TrainTicket/models.py:79
+msgid "city"
+msgstr "город"
+
+#: TrainTicket/models.py:80
+msgid "cities"
+msgstr "города"
+
+#: TrainTicket/models.py:84 TrainTicket/models.py:132
+msgid "price"
+msgstr "цена"
+
+#: TrainTicket/models.py:85
+msgid "optional"
+msgstr "опции"
+
+#: TrainTicket/models.py:93
+msgid "service"
+msgstr "товар"
+
+#: TrainTicket/models.py:94
+msgid "services"
+msgstr "товары"
+
+#: TrainTicket/models.py:97
+#, fuzzy
+#| msgid "train_trip"
+msgid "train_trip+"
+msgstr "поезд поездка"
+
+#: TrainTicket/models.py:98
+msgid "city_departure"
+msgstr "город отправления"
+
+#: TrainTicket/models.py:99
+msgid "city_arrival"
+msgstr "город прибытия"
+
+#: TrainTicket/models.py:100
+msgid "way_departure"
+msgstr "путь отправления"
+
+#: TrainTicket/models.py:101
+msgid "way_arrival"
+msgstr "путь прибытия"
+
+#: TrainTicket/models.py:111 TrainTicket/models.py:127
+msgid "trip"
+msgstr "поездка"
+
+#: TrainTicket/models.py:112
+msgid "trips"
+msgstr "поездки"
+
+#: TrainTicket/models.py:115
+msgid "full_name"
+msgstr "полное фио"
+
+#: TrainTicket/models.py:116
+msgid "docs"
+msgstr "серия и номер паспорта"
+
+#: TrainTicket/models.py:123 TrainTicket/models.py:129
+msgid "user"
+msgstr "пользователь"
+
+#: TrainTicket/models.py:124
+msgid "users"
+msgstr "пользователи"
+
+#: TrainTicket/models.py:134
+msgid "availability"
+msgstr "наличие"
+
+#: TrainTicket/models.py:136
+msgid "place"
+msgstr "место"
+
+#: TrainTicket/models.py:143
+msgid "ticket"
+msgstr "билет"
+
+#: TrainTicket/models.py:144
+msgid "tickets"
+msgstr "билеты"
+
+#~ msgid "train_wagon"
+#~ msgstr "поезд вагон"
